@@ -1,0 +1,39 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import BaseHead from '../components/BaseHead.astro';
+
+type Props = CollectionEntry<'blog'>['data'];
+
+const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+---
+
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/reveal.min.css" integrity="sha512-V5fKCVKOFy36w8zJmLzPH5R6zU6KvuHOvxfMRczx2ZeqTjKRGSBO9yiZjCKEJS3n6EmENwrH/xvSwXqxje+VVA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/theme/sky.min.css" integrity="sha512-6iKL2SQ2qtFNb7KMlpW71zGLs4GCZhmgJF8E5pVhZc5Y+lnfldf+wum/Zuk3jyk2v9tfXl5EN9f0hHsKo8tc+g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	</head>
+	
+	<body>
+		<slot />
+		<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/js/reveal.min.js" integrity="sha512-QYXU3Cojl94ZRiZRjUZpyg1odj9mKTON9MsTMzGNx/L3JqvMA3BQNraZwsZ83UeisO+QMVfFa83SyuYYJzR9hw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/zoom-js/zoom.min.js" integrity="sha512-ZI/dRLasiv+iRhV7jiuIOH7ZPizIzEOWA4hU9e9T2M9XeVK52i5Nn9E+gs6PZAtuvLE1VcdTXG0hbEFGnzKfNg==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+		<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/highlight/highlight.min.js" integrity="sha512-Ww3X8n7Y0V9xFWft1PYfLEESkLKZYjWHmaZgo6HZu4R0mX5D+sNK5YoLSgE10aS2SDXnppWRXndYiN7n/LxV3A==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+    <script>
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+				//history: true,
+				width: 1100,
+				height: 800,
+				margin: 0.01,
+				minScale: 0.2,
+				maxScale: 1.5,
+				slideNumber: true,
+				plugins: [ Highlight ]
+			});
+    </script>
+	</body>
+</html>
