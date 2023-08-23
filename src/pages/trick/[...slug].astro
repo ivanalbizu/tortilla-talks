@@ -1,0 +1,20 @@
+---
+import { CollectionEntry, getCollection } from 'astro:content';
+import TrickPost from '../../layouts/TrickPost.astro';
+
+export async function getStaticPaths() {
+	const tricks = await getCollection('trick');
+	return tricks.map((trick) => ({
+		params: { slug: trick.slug },
+		props: trick,
+	}));
+}
+type Props = CollectionEntry<'trick'>;
+
+const trick = Astro.props;
+const { Content } = await trick.render();
+---
+
+<TrickPost {...trick.data}>
+	<Content />
+</TrickPost>
