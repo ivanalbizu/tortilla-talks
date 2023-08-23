@@ -2,7 +2,7 @@
 import type { CollectionEntry } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 
-type Props = CollectionEntry<'blog'>['data'];
+type Props = CollectionEntry<'slide'>['data'];
 
 const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 ---
@@ -11,7 +11,54 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 	<head>
 		<BaseHead title={title} description={description} />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/reveal.min.css" integrity="sha512-V5fKCVKOFy36w8zJmLzPH5R6zU6KvuHOvxfMRczx2ZeqTjKRGSBO9yiZjCKEJS3n6EmENwrH/xvSwXqxje+VVA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/theme/sky.min.css" integrity="sha512-6iKL2SQ2qtFNb7KMlpW71zGLs4GCZhmgJF8E5pVhZc5Y+lnfldf+wum/Zuk3jyk2v9tfXl5EN9f0hHsKo8tc+g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/theme/moon.min.css" integrity="sha512-fIE1bAi7Yajoby7f9usOLSzdxew+pROc3K15ReE9q/9bFgJKi9xfNIfLLV0yRYdivOk8l6gKTIpOBx19F442Xg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<style is:inline>
+			.reveal img {
+				max-height: 100vh;
+			}
+			.reveal {
+				--r-block-margin: 0;
+			}
+
+			figure {
+				display: flex;
+				flex-flow: column;
+				align-items: center;
+			}
+
+			figcaption {
+				background-color: #222;
+				color: #fff;
+				font: italic smaller sans-serif;
+				padding: 3px;
+				text-align: center;
+				max-width: 100%;
+				font-size: 16px;
+				transform: translateY(-100%);
+				opacity: 0;
+				visibility: hidden;
+			}
+			figure img:hover + figcaption,
+			figure img + figcaption:hover {
+				visibility: visible;
+				opacity: 1;
+				transform: translateY(-100%);
+			}
+
+			.input-icon-codepen {
+				width: 160px;
+				margin-top: 2rem;
+				border: 1px solid #fff;
+				padding: 0.7rem 1rem;
+			}
+
+			td {
+				font-size: 20px;
+			}
+			.white-space-nowrap {
+				white-space: nowrap;
+			}
+		</style>
 	</head>
 	
 	<body>
