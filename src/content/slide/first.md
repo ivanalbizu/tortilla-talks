@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/SlidesLayout.astro
+layout: ../../layouts/SlidePost.astro
 title: 'First slide'
 description: 'Lorem ipsum dolor sit amet'
 pubDate: 'Jul 08 2022'

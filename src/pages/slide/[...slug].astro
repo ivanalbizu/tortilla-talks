@@ -1,6 +1,6 @@
 ---
 import { CollectionEntry, getCollection } from 'astro:content';
-import SlidesLayout from '../../layouts/SlidesLayout.astro';
+import SlidePost from '../../layouts/SlidePost.astro';
 
 export async function getStaticPaths() {
 	const slides = await getCollection('slide');
@@ -15,6 +15,6 @@ const slide = Astro.props;
 const { Content } = await slide.render();
 ---
 
-<SlidesLayout {...slide.data}>
+<SlidePost {...slide.data}>
 	<Content />
-</SlidesLayout>
+</SlidePost>
