@@ -14,5 +14,10 @@
     "@astrojs/rss": "^2.4.3",
     "@astrojs/sitemap": "^2.0.1",
     "astro": "^2.10.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.15",
+    "postcss-csso": "^6.0.1",
+    "postcss-preset-env": "^9.1.1"
   }
 }

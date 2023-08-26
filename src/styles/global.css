@@ -1,8 +1,10 @@
+@custom-media --tablet-device screen and (width >= 768px);
+@custom-media --desktop-device screen and (width >= 1024px);
+
 *:where(:not(html, iframe, canvas, img, svg, video, code, pre):not(svg *, symbol *)) {
 	all: unset;
 	display: revert;
 }
-
 *,
 *::before,
 *::after {
@@ -39,10 +41,10 @@ meter {
 	overflow-wrap: break-word;
 	-webkit-line-break: after-white-space;
 }
-
 :where([draggable="true"]) {
 	-webkit-user-drag: element;
 }
+
 :root {
 	--accent: #2337ff;
 	--accent-dark: #000d8a;
@@ -59,13 +61,6 @@ html,
 body {
 	min-height: 100svh;
 }
-body {
-	display: flex;
-	flex-direction: column;
-}
-main {
-	flex: 1;
-}
 
 body {
 	font-family: Arial, sans-serif;
@@ -79,8 +74,11 @@ body {
 	color: rgb(var(--gray-dark));
 	font-size: 1rem;
 	line-height: 1.5;
+	display: flex;
+	flex-direction: column;
 }
 main {
+	flex: 1;
 	width: 720px;
 	max-width: calc(100% - 2em);
 	margin: auto;
@@ -164,7 +162,7 @@ hr {
 	border: none;
 	border-top: 1px solid rgb(var(--gray-light));
 }
-@media (max-width: 720px) {
+@media (--tablet-deavice) {
 	body {
 		font-size: 18px;
 	}
@@ -181,12 +179,8 @@ hr {
 	height: 1px;
 	width: 1px;
 	overflow: hidden;
-	/* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
 	clip: rect(1px 1px 1px 1px);
-	/* maybe deprecated but we need to support legacy browsers */
 	clip: rect(1px, 1px, 1px, 1px);
-	/* modern browsers, clip-path works inwards from each corner */
 	clip-path: inset(50%);
-	/* added line to stop words getting smushed together (as they go onto seperate lines and some screen readers do not understand line feeds as a space */
 	white-space: nowrap;
 }
