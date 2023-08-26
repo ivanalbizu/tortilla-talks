@@ -1,6 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
+import HeaderSlides from '../components/HeaderSlides.astro';
 
 type Props = CollectionEntry<'slide'>['data'];
 
@@ -62,24 +63,26 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 	</head>
 	
 	<body>
+		<HeaderSlides />
 		<slot />
 		<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/js/reveal.min.js" integrity="sha512-QYXU3Cojl94ZRiZRjUZpyg1odj9mKTON9MsTMzGNx/L3JqvMA3BQNraZwsZ83UeisO+QMVfFa83SyuYYJzR9hw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 		<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/zoom-js/zoom.min.js" integrity="sha512-ZI/dRLasiv+iRhV7jiuIOH7ZPizIzEOWA4hU9e9T2M9XeVK52i5Nn9E+gs6PZAtuvLE1VcdTXG0hbEFGnzKfNg==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
 		<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/highlight/highlight.min.js" integrity="sha512-Ww3X8n7Y0V9xFWft1PYfLEESkLKZYjWHmaZgo6HZu4R0mX5D+sNK5YoLSgE10aS2SDXnppWRXndYiN7n/LxV3A==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+		<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/notes/notes.min.js" integrity="sha512-7DEMfv8iM8rlGUiVduuJQGcTazyiw+7PSxEMGuPzk+sW8KLZiSh5TrkCNTbjpNVL1o7grRlXTN+OQLEFuYGVxg==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
     <script>
 			Reveal.initialize({
 				controls: true,
 				progress: true,
 				center: true,
 				hash: true,
-				//history: true,
+				history: true,
 				width: 1100,
 				height: 800,
 				margin: 0.01,
 				minScale: 0.2,
 				maxScale: 1.5,
 				slideNumber: true,
-				plugins: [ Highlight ]
+				//	plugins: [ RevealHighlight, RevealNotes ]
 			});
     </script>
 	</body>
