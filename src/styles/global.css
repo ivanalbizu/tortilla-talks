@@ -13,9 +13,7 @@ body {
 	font-family: Arial, sans-serif;
 	margin: 0;
 	padding: 0;
-	text-align: left;
 	background: #fdfdff;
-	background-size: 100% 600px;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	color: rgb(var(--gray-dark));
@@ -31,30 +29,42 @@ body {
 	margin: auto;
 	padding: 3em 1em;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	margin: 0 0 0.5rem 0;
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+	margin-block-end: .4rem;
 	color: rgb(var(--black));
-	line-height: 1.2;
+	line-height: 1.1;
 }
+.h1,
 h1 {
-	font-size: 3.052em;
+	font-size: var(--font-size-h1);
 }
+.h2,
 h2 {
-	font-size: 2.441em;
+	font-size: var(--font-size-h2);
 }
+.h3,
 h3 {
-	font-size: 1.953em;
+	font-size: var(--font-size-h3);
 }
+.h4,
 h4 {
-	font-size: 1.563em;
+	font-size: var(--font-size-h4);
 }
+.h5,
 h5 {
-	font-size: 1.25em;
+	font-size: var(--font-size-h5);
+}
+.h6,
+h6 {
+	font-size: var(--font-size-h6);
+}
+p {
+	font-size: var(--font-size-p);
 }
 strong,
 b {
@@ -65,12 +75,6 @@ a {
 }
 a:hover {
 	color: var(--accent);
-}
-p {
-	margin-bottom: 1em;
-}
-.prose p {
-	margin-bottom: 2em;
 }
 textarea {
 	width: 100%;
@@ -85,7 +89,6 @@ table {
 img {
 	max-width: 100%;
 	height: auto;
-	border-radius: 8px;
 }
 code {
 	//padding: 2px 5px;

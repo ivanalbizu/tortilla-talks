@@ -5,7 +5,12 @@
 	--gray: 96, 115, 159;
 	--gray-light: 229, 233, 240;
 	--gray-dark: 34, 41, 57;
-	--gray-gradient: rgba(var(--gray-light), 50%), #fff;
-	--box-shadow: 0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
-		0 16px 32px rgba(var(--gray), 33%);
+
+	--font-size-h1: clamp(24px, 2.1572vw + 15.9106px, 38px);
+	--font-size-h2: clamp(22px, 1.8490vw + 15.0663px, 34px);
+	--font-size-h3: clamp(20px, 1.5408vw + 14.2219px, 30px);
+	--font-size-h4: clamp(18px, 1.2327vw + 13.3775px, 26px);
+	--font-size-h5: clamp(16px, 0.9245vw + 12.5331px, 22px);
+	--font-size-h6: clamp(16px, 0.6163vw + 13.6888px, 20px);
+	--font-size-p: clamp(14px, 0.5089vw + 12.0916px, 16px);
 }
