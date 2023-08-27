@@ -13,4 +13,14 @@
 	--font-size-h5: clamp(16px, 0.9245vw + 12.5331px, 22px);
 	--font-size-h6: clamp(16px, 0.6163vw + 13.6888px, 20px);
 	--font-size-p: clamp(14px, 0.5089vw + 12.0916px, 16px);
+
+	--spacing-xs: 8px;
+	--spacing-sm: 12px;
+	--spacing-md: 16px;
+	--spacing-lg: 24px;
+
+	--container-width-xs: 540px;
+	--container-width-sm: 720px;
+	--container-width-md: 960px;
+	--container-width-lg: 1140px;
 }

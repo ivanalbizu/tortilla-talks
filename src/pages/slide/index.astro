@@ -16,9 +16,6 @@ const slides = (await getCollection('slide')).sort(
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 		<style>
-			.main {
-				width: 960px;
-			}
 			ul {
 				display: flex;
 				flex-wrap: wrap;
@@ -77,7 +74,7 @@ const slides = (await getCollection('slide')).sort(
 	<body>
 		<Header />
 		<main class="main">
-			<section>
+			<section class="c c--md">
 				<ul>
 					{
 						slides.map((slide) => (

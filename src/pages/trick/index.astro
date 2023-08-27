@@ -17,9 +17,6 @@ const tricks = (await getCollection('trick')).sort(
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 		<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 		<style>
-			.main {
-				width: 960px;
-			}
 			ul {
 				display: flex;
 				flex-wrap: wrap;
@@ -56,7 +53,7 @@ const tricks = (await getCollection('trick')).sort(
 	<body>
 		<Header />
 		<main class="main">
-			<section>
+			<section class="c c--md">
 				<ul>
 					{
 						tricks.map((trick) => (

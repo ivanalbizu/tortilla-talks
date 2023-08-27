@@ -1,12 +1,20 @@
 @import "_reset.css";
 @import "_root.css";
-
-@custom-media --tablet-device screen and (width >= 768px);
-@custom-media --desktop-device screen and (width >= 1024px);
+@import "_custom-media.css";
 
 html,
 body {
 	min-height: 100svh;
+}
+
+.c {
+	width: min(100%, var(--container-width-lg));
+	margin-inline: auto;
+	padding-inline: var(--spacing-sm);
+
+	&.c--md {
+		max-width: var(--container-width-md);
+	}
 }
 
 body {
@@ -24,10 +32,7 @@ body {
 }
 .main {
 	flex: 1;
-	width: 720px;
-	max-width: calc(100% - 2em);
-	margin: auto;
-	padding: 3em 1em;
+	padding: var(--spacing-lg) 0;
 }
 h1, .h1,
 h2, .h2,
@@ -115,9 +120,6 @@ hr {
 @media (--tablet-deavice) {
 	body {
 		font-size: 18px;
-	}
-	.main {
-		padding: 1em;
 	}
 }
 
