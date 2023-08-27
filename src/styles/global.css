@@ -1,61 +1,8 @@
+@import "_reset.css";
+@import "_root.css";
+
 @custom-media --tablet-device screen and (width >= 768px);
 @custom-media --desktop-device screen and (width >= 1024px);
-
-*:where(:not(html, iframe, canvas, img, svg, video, code, pre):not(svg *, symbol *)) {
-	all: unset;
-	display: revert;
-}
-*,
-*::before,
-*::after {
-	box-sizing: border-box;
-}
-a, button {
-	cursor: revert;
-}
-ol, ul, menu {
-	list-style: none;
-}
-img {
-	max-width: 100%;
-}
-table {
-	border-collapse: collapse;
-}
-textarea {
-	white-space: revert;
-}
-meter {
-	-webkit-appearance: revert;
-	appearance: revert;
-}
-::placeholder {
-	color: unset;
-}
-:where([hidden]) {
-	display: none;
-}
-:where([contenteditable]) {
-	-moz-user-modify: read-write;
-	-webkit-user-modify: read-write;
-	overflow-wrap: break-word;
-	-webkit-line-break: after-white-space;
-}
-:where([draggable="true"]) {
-	-webkit-user-drag: element;
-}
-
-:root {
-	--accent: #2337ff;
-	--accent-dark: #000d8a;
-	--black: 15, 18, 25;
-	--gray: 96, 115, 159;
-	--gray-light: 229, 233, 240;
-	--gray-dark: 34, 41, 57;
-	--gray-gradient: rgba(var(--gray-light), 50%), #fff;
-	--box-shadow: 0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
-		0 16px 32px rgba(var(--gray), 33%);
-}
 
 html,
 body {
@@ -77,7 +24,7 @@ body {
 	display: flex;
 	flex-direction: column;
 }
-main {
+.main {
 	flex: 1;
 	width: 720px;
 	max-width: calc(100% - 2em);
@@ -141,13 +88,13 @@ img {
 	border-radius: 8px;
 }
 code {
-	padding: 2px 5px;
-	background-color: rgb(var(--gray-light));
-	border-radius: 2px;
+	//padding: 2px 5px;
+	//background-color: rgb(var(--gray-light));
+	//border-radius: 2px;
 }
 pre {
 	padding: 1.5em;
-	border-radius: 8px;
+	//border-radius: 8px;
 }
 pre > code {
 	all: unset;
@@ -166,7 +113,7 @@ hr {
 	body {
 		font-size: 18px;
 	}
-	main {
+	.main {
 		padding: 1em;
 	}
 }

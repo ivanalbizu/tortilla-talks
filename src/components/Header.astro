@@ -3,7 +3,7 @@ import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../consts';
 ---
 
-<header>
+<header class="header">
 	<nav>
 		<h2><a href="/">{SITE_TITLE}</a></h2>
 		<div class="internal-links">
@@ -14,7 +14,7 @@ import { SITE_TITLE } from '../consts';
 	</nav>
 </header>
 <style>
-	header {
+	.header {
 		margin: 0;
 		background: white;
 		box-shadow: 0 2px 8px rgba(var(--black), 5%);
