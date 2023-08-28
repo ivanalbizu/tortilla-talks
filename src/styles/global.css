@@ -8,12 +8,12 @@ body {
 }
 
 .c {
-	width: min(100%, var(--container-width-lg));
+	width: min(100%, var(--container-width-md));
 	margin-inline: auto;
 	padding-inline: var(--spacing-sm);
 
-	&.c--md {
-		max-width: var(--container-width-md);
+	&.c--lg {
+		max-width: var(--container-width-lg);
 	}
 }
 

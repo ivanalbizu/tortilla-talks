@@ -6,7 +6,7 @@ import { SITE_TITLE } from '../consts';
 <header class="header">
 	<nav class="c nav">
 		<h2><a href="/">{SITE_TITLE}</a></h2>
-		<div class="internal-links">
+		<div class="nav__menu">
 			<HeaderLink href="/trick">Trick</HeaderLink>
 			<HeaderLink href="/slide">Slide</HeaderLink>
 			<HeaderLink href="/about">About</HeaderLink>
@@ -31,9 +31,16 @@ import { SITE_TITLE } from '../consts';
 		align-items: center;
 		justify-content: space-between;
 
+		.nav__menu {
+			display: grid;
+			grid-auto-flow: column;
+			gap: var(--spacing-xs) var(--spacing-sm);
+		}
+
 		a {
-			padding: var(--spacing-sm);
+			padding: var(--spacing-sm) 0;
 			color: var(--black);
+			border-top: 4px solid transparent;
 			border-bottom: 4px solid transparent;
 			text-decoration: none;
 			&.active {
