@@ -68,8 +68,22 @@ h5 {
 h6 {
 	font-size: var(--font-size-h6);
 }
-p {
+p, li {
 	font-size: var(--font-size-p);
+}
+ul, p {
+	margin-block-end: var(--spacing-xs);
+}
+ul {
+	padding-inline-start: var(--spacing-sm);
+}
+li {
+	&:not(:last-of-type) {
+		margin-block-end: var(--spacing-2xs);
+	}
+}
+li::marker {
+  content: '• ';
 }
 strong,
 b {
