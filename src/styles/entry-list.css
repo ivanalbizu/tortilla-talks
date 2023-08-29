@@ -1,0 +1,32 @@
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-lg);
+  padding: 0;
+}
+ul li {
+  width: 100%;
+  &::marker {
+    content: none;
+  }
+  li * {
+    text-decoration: none;
+    transition: 0.2s ease;
+  }
+  img {
+    margin-bottom: 0.5rem;
+    border-radius: 12px;
+  }
+  a {
+    display: block;
+  }
+}
+.title {
+  margin: 0;
+  color: rgb(var(--black));
+  line-height: 1;
+}
+.date {
+  margin: 0;
+  color: rgb(var(--gray));
+}
