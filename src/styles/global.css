@@ -152,3 +152,16 @@ hr {
 	clip-path: inset(50%);
 	white-space: nowrap;
 }
+
+.featured {
+	display: grid;
+	gap: var(--spacing-lg) var(--spacing-lg);
+	margin-top: calc(var(--spacing-lg) * 2);
+	@media (--tablet-device) {
+		grid-template-columns: 1fr 1fr;
+
+		.featured__item {
+			background-color: red;
+		}
+	}
+}
