@@ -5,15 +5,13 @@ import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import { getCollection } from 'astro:content';
 
-const sortedTricks = (await getCollection('trick')).sort(
+const tricks = (await getCollection('trick')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-);
-const tricks = sortedTricks.slice(0, 2);
+).slice(0, 2);
 
-const sortedSlides = (await getCollection('slide')).sort(
+const slides = (await getCollection('slide')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-);
-const slides = sortedSlides.slice(0, 2);
+).slice(0, 2);
 
 ---
 
