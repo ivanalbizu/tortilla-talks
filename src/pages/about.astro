@@ -1,21 +1,13 @@
 ---
-import Layout from '../layouts/TrickPost.astro';
+import Layout from '../layouts/BaseLayout.astro';
 ---
 
 <Layout
 	title="About us"
 	description="Lorem ipsum dolor sit amet"
-	pubDate={new Date('August 08 2021')}
 >
-	<p>TODO: crear otro Layout para DefaultLayout.</p>
-	<p>La intención de este sitio es crear contenidos que puedan ser relevantes compatir con todo el equipo, bien sea por algo que estemos desarrollando y sea útil o por novedades dentro del mundo front-end.</p>
-	<p>En la sección de Trick la ídea es anotar enlaces de interés para el equipo con una muy breve descripción</p>
-	<p>El objetivo de la sección de Slide es para crear las presentaciones para apoyar las charlas. Este tipo de entrada hace uso de reveal.js para crear presentaciones dinámicas</p>
-	<div class="h1">titulo h1</div>
-	<div class="h2">titulo h2</div>
-	<div class="h3">titulo h3</div>
-	<div class="h4">titulo h4</div>
-	<div class="h5">titulo h5</div>
-	<div class="h6">titulo h6</div>
-	<div class="p">titulo p</div>
+	<p>La intención de este sitio es crear contenidos que puedan ser relevantes compatir con todo el equipo, bien sea por algo que estemos desarrollando o por novedades dentro del mundo front-end.</p>
+	<p>En la sección de <strong>Trick</strong> la ídea es anotar enlaces de interés para el equipo con una muy breve descripción.</p>
+	<p>El objetivo de la sección de <strong>Slide</strong> es para crear las presentaciones para apoyar las charlas. Este tipo de entrada hace uso de <a href="https://revealjs.com/" target="_blank">reveal.js</a> para crear presentaciones dinámicas.</p>
+	<p>Se intentará sacar un slot de unos 15 min. los viernes, si las necesidades del desarrollo lo permite, para que alguno del equipo quiere exponer al resto algún tema de interés.</p>
 </Layout>

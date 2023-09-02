@@ -157,11 +157,19 @@ hr {
 	display: grid;
 	gap: var(--spacing-lg) var(--spacing-lg);
 	margin-top: calc(var(--spacing-lg) * 2);
+	.featured__item {
+		background-color: rgb(var(--gray-light));
+		padding: var(--spacing-sm);
+	}
+	
+	.featured-title {
+		font-size: var(--font-size-h2);
+		margin-bottom: var(--spacing-lg);
+		padding-bottom: var(--spacing-sm);
+		border-bottom: 1px solid rgb(var(--gray));
+	}
+
 	@media (--tablet-device) {
 		grid-template-columns: 1fr 1fr;
-
-		.featured__item {
-			background-color: red;
-		}
 	}
 }
