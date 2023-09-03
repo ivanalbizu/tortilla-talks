@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/SlidePost.astro
 title: 'CSS @layers'
 description: 'Control del flujo de la cascada CSS'
 pubDate: 'Aug 23 2023'

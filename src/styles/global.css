@@ -112,13 +112,13 @@ img {
 	height: auto;
 }
 code {
-	//padding: 2px 5px;
-	//background-color: rgb(var(--gray-light));
-	//border-radius: 2px;
+	padding: 2px 5px;
+	background-color: rgb(var(--gray-light));
+	border-radius: 2px;
 }
 pre {
 	padding: 1.5em;
-	//border-radius: 8px;
+	border-radius: 8px;
 }
 pre > code {
 	all: unset;
