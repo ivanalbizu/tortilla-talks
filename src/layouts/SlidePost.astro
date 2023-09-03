@@ -72,14 +72,10 @@ const { title, description } = Astro.props;
 	<body>
 		<HeaderSlides />
 		<slot />
-		<!--<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/js/reveal.min.js" integrity="sha512-QYXU3Cojl94ZRiZRjUZpyg1odj9mKTON9MsTMzGNx/L3JqvMA3BQNraZwsZ83UeisO+QMVfFa83SyuYYJzR9hw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>-->
-		<script is:inline src="/src/scripts/reveal.js"></script>
-		<!--<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/zoom-js/zoom.min.js" integrity="sha512-ZI/dRLasiv+iRhV7jiuIOH7ZPizIzEOWA4hU9e9T2M9XeVK52i5Nn9E+gs6PZAtuvLE1VcdTXG0hbEFGnzKfNg==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>-->
-		<!--<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/highlight/highlight.min.js" integrity="sha512-Ww3X8n7Y0V9xFWft1PYfLEESkLKZYjWHmaZgo6HZu4R0mX5D+sNK5YoLSgE10aS2SDXnppWRXndYiN7n/LxV3A==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>-->
-		<script is:inline src="/src/scripts/plugin/zoom/zoom.js"></script>
-		<script is:inline src="/src/scripts/plugin/highlight/highlight.js"></script>
-		<!--<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/notes/notes.min.js" integrity="sha512-7DEMfv8iM8rlGUiVduuJQGcTazyiw+7PSxEMGuPzk+sW8KLZiSh5TrkCNTbjpNVL1o7grRlXTN+OQLEFuYGVxg==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>-->
-		<script is:inline src="/src/scripts/plugin/notes/notes.js"></script>
+		<script is:inline src="/public/scripts/reveal.js"></script>
+		<script is:inline src="/public/scripts/plugin/zoom/zoom.js"></script>
+		<script is:inline src="/public/scripts/plugin/highlight/highlight.js"></script>
+		<script is:inline src="/public/scripts/plugin/notes/notes.js"></script>
     <script>
 			Reveal.initialize({
 				controls: true,
