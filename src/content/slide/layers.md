@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/SlidePost.astro
 title: 'CSS @layers'
 description: 'Control del flujo de la cascada CSS'
 pubDate: 'Aug 23 2023'
@@ -112,22 +111,20 @@ pubDate: 'Aug 23 2023'
     </section>
     <section>
       <p class="title-slide">@layer nested</p>
-      <pre>
-        <code data-trim data-trim data-line-numbers="1-7|7-14">
-          @layer outer {
-            @layer inner {
-              .button {
-                color: red;
-              }
+      <pre><code data-trim data-line-numbers="1-7|8-12">
+        @layer outer {
+          @layer inner {
+            .button {
+              color: red;
             }
           }
-          @layer outer.inner {
-            .another {
-              color: green;
-            }
+        }
+        @layer outer.inner {
+          .another {
+            color: green;
           }
-        </code>
-      </pre>
+        }
+      </code></pre>
       <aside class="notes">
         <ol>
           <li>Se puede incluir @layer dentro de otras</li>

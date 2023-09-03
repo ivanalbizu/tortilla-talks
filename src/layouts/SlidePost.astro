@@ -1,6 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import BaseHead from '../components/BaseHead.astro';
+import SlideHead from '../components/SlideHead.astro';
 import HeaderSlides from '../components/HeaderSlides.astro';
 
 type Props = CollectionEntry<'slide'>['data'];
@@ -10,9 +10,7 @@ const { title, description } = Astro.props;
 
 <html lang="es">
 	<head>
-		<BaseHead title={title} description={description} />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/reveal.min.css" integrity="sha512-V5fKCVKOFy36w8zJmLzPH5R6zU6KvuHOvxfMRczx2ZeqTjKRGSBO9yiZjCKEJS3n6EmENwrH/xvSwXqxje+VVA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/theme/moon.min.css" integrity="sha512-fIE1bAi7Yajoby7f9usOLSzdxew+pROc3K15ReE9q/9bFgJKi9xfNIfLLV0yRYdivOk8l6gKTIpOBx19F442Xg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<SlideHead title={title} description={description} />
 		<style is:inline>
 			.reveal img {
 				max-height: 100vh;
@@ -61,10 +59,6 @@ const { title, description } = Astro.props;
 			}
 			.reveal pre {
 				background-color: #151515;
-				padding: 16px 24px 0px;
-			}
-			.reveal pre code {
-				padding: 0 20px 0;
 			}
 		</style>
 	</head>
