@@ -16,5 +16,14 @@ const { Content } = await slide.render();
 ---
 
 <SlidePost {...slide.data}>
+	<style is:inline>
+		.header a {
+			font-family: sans-serif;
+			color: #fff;
+			margin-left: 4px;
+			font-size: 12px;
+			letter-spacing: 0.6px;
+		}
+	</style>
 	<Content />
 </SlidePost>
