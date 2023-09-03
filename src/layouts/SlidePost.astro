@@ -72,11 +72,11 @@ const { title, description } = Astro.props;
 	<body>
 		<HeaderSlides />
 		<slot />
-		<script is:inline src="/public/scripts/reveal.js"></script>
-		<script is:inline src="/public/scripts/plugin/zoom/zoom.js"></script>
-		<script is:inline src="/public/scripts/plugin/highlight/highlight.js"></script>
-		<script is:inline src="/public/scripts/plugin/notes/notes.js"></script>
-    <script is:inline>
+		<script type="module" src="/public/scripts/reveal.js"></script>
+		<script type="module" src="/public/scripts/plugin/zoom/zoom.js"></script>
+		<script type="module" src="/public/scripts/plugin/highlight/highlight.js"></script>
+		<script type="module" src="/public/scripts/plugin/notes/notes.js"></script>
+    <script type="module">
 			Reveal.initialize({
 				controls: true,
 				progress: true,
