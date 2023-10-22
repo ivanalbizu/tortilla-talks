@@ -66,11 +66,12 @@ const { title, description } = Astro.props;
 	<body>
 		<HeaderSlides />
 		<slot />
-		<script is:inline src="/scripts/reveal.js"></script>
-		<script is:inline src="/scripts/plugin/zoom/zoom.js"></script>
-		<script is:inline src="/scripts/plugin/highlight/highlight.js"></script>
-		<script is:inline src="/scripts/plugin/notes/notes.js"></script>
-    <script is:inline>
+    <script is:inline type="module">
+			import "/scripts/reveal/reveal.js";
+			import "/scripts/reveal/plugin/zoom/zoom.js";
+			import "/scripts/reveal/plugin/highlight/highlight.js";
+			import "/scripts/reveal/plugin/notes/notes.js";
+
 			Reveal.initialize({
 				controls: true,
 				progress: true,
@@ -83,7 +84,7 @@ const { title, description } = Astro.props;
 				minScale: 0.2,
 				maxScale: 1.5,
 				slideNumber: true,
-				plugins: [ RevealHighlight, RevealNotes ]
+				plugins: [ RevealHighlight, RevealNotes, RevealZoom ]
 			});
     </script>
 	</body>
