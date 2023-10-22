@@ -67,10 +67,10 @@ const { title, description } = Astro.props;
 		<HeaderSlides />
 		<slot />
     <script is:inline type="module">
-			import "/scripts/reveal/reveal.js";
-			import "/scripts/reveal/plugin/zoom/zoom.js";
-			import "/scripts/reveal/plugin/highlight/highlight.js";
-			import "/scripts/reveal/plugin/notes/notes.js";
+			import "/plugins/reveal/reveal.js";
+			import "/plugins/reveal/plugin/zoom/zoom.js";
+			import "/plugins/reveal/plugin/highlight/highlight.js";
+			import "/plugins/reveal/plugin/notes/notes.js";
 
 			Reveal.initialize({
 				controls: true,
